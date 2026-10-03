@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import '../../theme/app_colors.dart';
-import '../../widgets/game_asset_image.dart';
 import '../../widgets/game_button.dart';
 
+/// REQUIRED ASSETS:
+/// 1. Background: assets/images/backgrounds/boss_intro_bg.png
+/// 2. Characters: assets/images/characters/dragon_fire.png
+///                assets/images/characters/panda_archer.png
 class BossBattleIntroScreen extends StatelessWidget {
   final VoidCallback onStartGame;
   final VoidCallback onBack;
@@ -16,65 +19,62 @@ class BossBattleIntroScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF1E0A24),
       body: Stack(
         children: [
-          // 1. FULL BACKGROUND FANTASY ART
+          // ==========================================
+          // LAYER 0: PURE EPIC BATTLEFIELD BACKGROUND (NO CHARACTERS, NO UI)
+          // REQUIRED ASSET: assets/images/backgrounds/boss_intro_bg.png
+          // ==========================================
           Positioned.fill(
-            child: Container(
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [Color(0xFF5C0E1A), Color(0xFF2E0815), Color(0xFF14081E)],
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                ),
-              ),
-              child: const GameAssetImage(
-                assetPath: 'assets/images/backgrounds/boss_battle_intro_bg.png',
-                fit: BoxFit.cover,
-                fallbackEmoji: '🏯',
-              ),
+            child: Image.asset(
+              'assets/images/backgrounds/boss_intro_bg.png',
+              fit: BoxFit.cover,
             ),
           ),
 
-          // 2. DRAGON UPPER RIGHT
+          // ==========================================
+          // LAYER 1: FOREGROUND CHARACTERS
+          // ==========================================
+          // 1. Fire Dragon on Upper Right
           Positioned(
-            top: 60,
-            right: -20,
-            width: 250,
-            height: 250,
-            child: const GameAssetImage(
-              assetPath: 'assets/images/characters/dragon_fire.png',
+            top: 70,
+            right: -25,
+            width: 270,
+            height: 270,
+            child: Image.asset(
+              'assets/images/characters/dragon_fire.png',
               fit: BoxFit.contain,
-              fallbackEmoji: '🐲🔥',
+              errorBuilder: (_, __, ___) => const Center(child: Text('🐲🔥', style: TextStyle(fontSize: 80))),
             ),
           ),
 
-          // 3. PANDA ARCHER LOWER LEFT
+          // 2. Panda Archer on Lower Left
           Positioned(
-            bottom: 230,
+            bottom: 220,
             left: 10,
-            width: 200,
-            height: 200,
-            child: const GameAssetImage(
-              assetPath: 'assets/images/characters/panda_archer.png',
+            width: 210,
+            height: 210,
+            child: Image.asset(
+              'assets/images/characters/panda_archer.png',
               fit: BoxFit.contain,
-              fallbackEmoji: '🐼🏹',
+              errorBuilder: (_, __, ___) => const Center(child: Text('🐼🏹', style: TextStyle(fontSize: 70))),
             ),
           ),
 
-          // 4. UI OVERLAYS & CONTENT
+          // ==========================================
+          // LAYER 2: FLUTTER UI & INFO CARD
+          // ==========================================
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 children: [
-                  // Back Button
+                  // Back Button Top-Left
                   Align(
                     alignment: Alignment.topLeft,
                     child: Container(
                       decoration: BoxDecoration(
-                        color: Colors.black.withOpacity(0.35),
+                        color: Colors.black.withOpacity(0.4),
                         shape: BoxShape.circle,
                       ),
                       child: IconButton(
@@ -83,7 +83,7 @@ class BossBattleIntroScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 8),
 
                   // Epic Title & Subtitle
                   const Text(
@@ -93,11 +93,12 @@ class BossBattleIntroScreen extends StatelessWidget {
                       fontWeight: FontWeight.w900,
                       color: Colors.white,
                       shadows: [
-                        Shadow(color: Colors.black87, blurRadius: 12, offset: Offset(0, 3)),
+                        Shadow(color: Colors.black, blurRadius: 14, offset: Offset(0, 4)),
+                        Shadow(color: Color(0xFFD32F2F), blurRadius: 20),
                       ],
                     ),
                   ),
-                  const SizedBox(height: 6),
+                  const SizedBox(height: 4),
                   const Text(
                     'Đánh bại Boss bằng kiến thức tiếng Trung!',
                     style: TextStyle(
@@ -105,23 +106,23 @@ class BossBattleIntroScreen extends StatelessWidget {
                       fontWeight: FontWeight.w700,
                       color: AppColors.primaryGold,
                       shadows: [
-                        Shadow(color: Colors.black87, blurRadius: 8, offset: Offset(0, 2)),
+                        Shadow(color: Colors.black, blurRadius: 8, offset: Offset(0, 2)),
                       ],
                     ),
                   ),
                   const Spacer(),
 
-                  // Bottom Info Card (3 Bullet Features)
+                  // Bottom Info Card (3 Bullet Points)
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 18),
                     decoration: BoxDecoration(
-                      color: const Color(0xFF1E1729).withOpacity(0.85),
+                      color: const Color(0xFF140718).withOpacity(0.88),
                       borderRadius: BorderRadius.circular(24),
-                      border: Border.all(color: Colors.white.withOpacity(0.2), width: 1.2),
+                      border: Border.all(color: Colors.white.withOpacity(0.24), width: 1.5),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withOpacity(0.4),
-                          blurRadius: 16,
+                          color: Colors.black.withOpacity(0.5),
+                          blurRadius: 18,
                           offset: const Offset(0, 6),
                         ),
                       ],
@@ -138,7 +139,7 @@ class BossBattleIntroScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 20),
 
-                  // Start Battle CTA Button
+                  // Start Button
                   GameButton(
                     text: '⚔️ Bắt đầu chơi',
                     gradient: AppColors.orangeGoldGradient,

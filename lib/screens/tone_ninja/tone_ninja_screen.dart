@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import '../../theme/app_colors.dart';
-import '../../widgets/game_asset_image.dart';
 
+/// REQUIRED ASSETS:
+/// 1. Background: assets/images/backgrounds/tone_ninja_bg.png
+/// 2. Character:  assets/images/characters/panda_ninja.png
 class ToneNinjaScreen extends StatelessWidget {
   final VoidCallback onBack;
 
@@ -10,28 +12,29 @@ class ToneNinjaScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF131034),
       body: Stack(
         children: [
-          // 1. NIGHT NINJA VILLAGE BACKGROUND
+          // ==========================================
+          // LAYER 0: PURE CHINESE VILLAGE AT NIGHT BACKGROUND
+          // REQUIRED ASSET: assets/images/backgrounds/tone_ninja_bg.png
+          // ==========================================
           Positioned.fill(
-            child: Container(
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [Color(0xFF0F0B26), Color(0xFF1B144A), Color(0xFF281D66)],
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                ),
-              ),
-              child: const GameAssetImage(
-                assetPath: 'assets/images/backgrounds/ninja_night_bg.png',
-                fit: BoxFit.cover,
-                fallbackEmoji: '🏯🌙',
-              ),
+            child: Image.asset(
+              'assets/images/backgrounds/tone_ninja_bg.png',
+              fit: BoxFit.cover,
             ),
           ),
 
-          // 2. CONTENT
+          // Night Vignette
+          Positioned.fill(
+            child: Container(
+              color: Colors.black.withOpacity(0.35),
+            ),
+          ),
+
+          // ==========================================
+          // LAYER 1: FLUTTER GAMEPLAY UI & NINJA PANDA
+          // ==========================================
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
@@ -41,17 +44,28 @@ class ToneNinjaScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      IconButton(
-                        icon: const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.white),
-                        onPressed: onBack,
+                      Container(
+                        decoration: BoxDecoration(color: Colors.black.withOpacity(0.35), shape: BoxShape.circle),
+                        child: IconButton(
+                          icon: const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.white, size: 20),
+                          onPressed: onBack,
+                        ),
                       ),
                       const Text(
                         'Tone Ninja',
-                        style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900, color: Colors.white),
+                        style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.w900,
+                          color: Colors.white,
+                          shadows: [Shadow(color: Colors.black, blurRadius: 6)],
+                        ),
                       ),
-                      IconButton(
-                        icon: const Icon(Icons.settings, color: Colors.white),
-                        onPressed: () {},
+                      Container(
+                        decoration: BoxDecoration(color: Colors.black.withOpacity(0.35), shape: BoxShape.circle),
+                        child: IconButton(
+                          icon: const Icon(Icons.settings, color: Colors.white, size: 22),
+                          onPressed: () {},
+                        ),
                       ),
                     ],
                   ),
@@ -64,7 +78,12 @@ class ToneNinjaScreen extends StatelessWidget {
                       children: const [
                         Text(
                           '⭐ 3 / 10',
-                          style: TextStyle(color: AppColors.primaryGold, fontWeight: FontWeight.w900, fontSize: 16),
+                          style: TextStyle(
+                            color: AppColors.primaryGold,
+                            fontWeight: FontWeight.w900,
+                            fontSize: 16,
+                            shadows: [Shadow(color: Colors.black, blurRadius: 4)],
+                          ),
                         ),
                         Row(
                           children: [
@@ -80,37 +99,32 @@ class ToneNinjaScreen extends StatelessWidget {
                   ),
                   const Spacer(),
 
-                  // Ninja Panda Character & Audio Box
-                  Container(
+                  // Ninja Panda Character Overlay
+                  SizedBox(
                     width: 140,
                     height: 140,
-                    decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.08),
-                      shape: BoxShape.circle,
-                      border: Border.all(color: Colors.white24, width: 2),
-                    ),
-                    clipBehavior: Clip.antiAlias,
-                    child: const GameAssetImage(
-                      assetPath: 'assets/images/characters/panda_ninja.png',
-                      fallbackEmoji: '🥷🐼',
+                    child: Image.asset(
+                      'assets/images/characters/panda_ninja.png',
+                      fit: BoxFit.contain,
+                      errorBuilder: (_, __, ___) => const Center(child: Text('🥷🐼', style: TextStyle(fontSize: 64))),
                     ),
                   ),
                   const SizedBox(height: 14),
 
                   // Speaker Button & Target Pinyin
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                    padding: const EdgeInsets.symmetric(horizontal: 26, vertical: 12),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFFFF7E8),
-                      borderRadius: BorderRadius.circular(20),
+                      color: AppColors.cardCream,
+                      borderRadius: BorderRadius.circular(22),
                       boxShadow: [
-                        BoxShadow(color: Colors.black.withOpacity(0.3), blurRadius: 10, offset: const Offset(0, 4)),
+                        BoxShadow(color: Colors.black.withOpacity(0.35), blurRadius: 12, offset: const Offset(0, 4)),
                       ],
                     ),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: const [
-                        Icon(Icons.volume_up_rounded, color: AppColors.primaryBlue, size: 30),
+                        Icon(Icons.volume_up_rounded, color: AppColors.primaryBlue, size: 32),
                         SizedBox(width: 12),
                         Text(
                           'mǎ',
@@ -140,7 +154,7 @@ class ToneNinjaScreen extends StatelessWidget {
                       _buildToneCard('mà (4)'),
                     ],
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 18),
                 ],
               ),
             ),
@@ -153,7 +167,7 @@ class ToneNinjaScreen extends StatelessWidget {
   Widget _buildToneCard(String text, {bool isCorrect = false}) {
     return Container(
       decoration: BoxDecoration(
-        color: isCorrect ? const Color(0xFF20D66B).withOpacity(0.25) : Colors.white.withOpacity(0.12),
+        color: isCorrect ? const Color(0xFF20D66B).withOpacity(0.28) : Colors.white.withOpacity(0.12),
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
           color: isCorrect ? AppColors.successGreen : Colors.white30,

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../theme/app_colors.dart';
-import '../../widgets/game_asset_image.dart';
 
+/// REQUIRED ASSETS:
+/// 1. Background: assets/images/backgrounds/radical_builder_bg.png
 class RadicalBuilderScreen extends StatelessWidget {
   final VoidCallback onBack;
 
@@ -10,28 +11,22 @@ class RadicalBuilderScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF0F5A54),
       body: Stack(
         children: [
-          // 1. GARDEN & PAGODA BACKGROUND
+          // ==========================================
+          // LAYER 0: PURE PEACEFUL CHINESE GARDEN BACKGROUND
+          // REQUIRED ASSET: assets/images/backgrounds/radical_builder_bg.png
+          // ==========================================
           Positioned.fill(
-            child: Container(
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [Color(0xFF0A403C), Color(0xFF13665F), Color(0xFF1B8A81)],
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                ),
-              ),
-              child: const GameAssetImage(
-                assetPath: 'assets/images/backgrounds/radical_garden_bg.png',
-                fit: BoxFit.cover,
-                fallbackEmoji: '🏯🌸',
-              ),
+            child: Image.asset(
+              'assets/images/backgrounds/radical_builder_bg.png',
+              fit: BoxFit.cover,
             ),
           ),
 
-          // 2. CONTENT
+          // ==========================================
+          // LAYER 1: FLUTTER GAMEPLAY UI
+          // ==========================================
           SafeArea(
             child: Column(
               children: [
@@ -41,21 +36,28 @@ class RadicalBuilderScreen extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      IconButton(
-                        icon: const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.white),
-                        onPressed: onBack,
+                      Container(
+                        decoration: BoxDecoration(color: Colors.black.withOpacity(0.35), shape: BoxShape.circle),
+                        child: IconButton(
+                          icon: const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.white, size: 20),
+                          onPressed: onBack,
+                        ),
                       ),
                       const Text(
                         'Xây chữ Hán',
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 22,
                           fontWeight: FontWeight.w900,
                           color: Colors.white,
+                          shadows: [Shadow(color: Colors.black87, blurRadius: 6)],
                         ),
                       ),
-                      IconButton(
-                        icon: const Icon(Icons.settings, color: Colors.white),
-                        onPressed: () {},
+                      Container(
+                        decoration: BoxDecoration(color: Colors.black.withOpacity(0.35), shape: BoxShape.circle),
+                        child: IconButton(
+                          icon: const Icon(Icons.settings, color: Colors.white, size: 22),
+                          onPressed: () {},
+                        ),
                       ),
                     ],
                   ),
@@ -73,7 +75,7 @@ class RadicalBuilderScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                           child: Container(
                             height: 12,
-                            color: Colors.black.withOpacity(0.3),
+                            color: Colors.black.withOpacity(0.35),
                             child: Align(
                               alignment: Alignment.centerLeft,
                               child: FractionallySizedBox(
@@ -91,7 +93,12 @@ class RadicalBuilderScreen extends StatelessWidget {
                       const SizedBox(width: 10),
                       const Text(
                         '6 / 10',
-                        style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 14),
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w900,
+                          fontSize: 14,
+                          shadows: [Shadow(color: Colors.black, blurRadius: 4)],
+                        ),
                       ),
                     ],
                   ),
@@ -108,8 +115,8 @@ class RadicalBuilderScreen extends StatelessWidget {
                     border: Border.all(color: AppColors.cardCreamBorder, width: 2),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withOpacity(0.3),
-                        blurRadius: 20,
+                        color: Colors.black.withOpacity(0.35),
+                        blurRadius: 22,
                         offset: const Offset(0, 8),
                       ),
                     ],
@@ -132,11 +139,11 @@ class RadicalBuilderScreen extends StatelessWidget {
                   width: double.infinity,
                   padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 26),
                   decoration: BoxDecoration(
-                    color: const Color(0xFFF1FBF8),
+                    color: const Color(0xFFF1FBF8).withOpacity(0.96),
                     borderRadius: const BorderRadius.vertical(top: Radius.circular(32)),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withOpacity(0.15),
+                        color: Colors.black.withOpacity(0.2),
                         blurRadius: 16,
                         offset: const Offset(0, -4),
                       ),
@@ -156,7 +163,7 @@ class RadicalBuilderScreen extends StatelessWidget {
                             border: Border.all(color: const Color(0xFF0F766E), width: 2),
                             boxShadow: [
                               BoxShadow(
-                                color: Colors.black.withOpacity(0.06),
+                                color: Colors.black.withOpacity(0.08),
                                 blurRadius: 8,
                                 offset: const Offset(0, 3),
                               ),

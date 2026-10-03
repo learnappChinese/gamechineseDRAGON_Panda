@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import '../../theme/app_colors.dart';
-import '../../widgets/game_asset_image.dart';
 
+/// REQUIRED ASSETS:
+/// 1. Background: assets/images/backgrounds/restaurant_bg.png
+/// 2. Character:  assets/images/characters/panda_chef.png
+/// 3. Foods:      assets/images/foods/noodles.png
+///                assets/images/foods/rice.png
+///                assets/images/foods/dumplings.png
 class ChineseRestaurantScreen extends StatelessWidget {
   final VoidCallback onBack;
 
@@ -10,28 +15,22 @@ class ChineseRestaurantScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF3F1905),
       body: Stack(
         children: [
-          // 1. TRADITIONAL RESTAURANT BACKGROUND
+          // ==========================================
+          // LAYER 0: PURE RESTAURANT INTERIOR BACKGROUND
+          // REQUIRED ASSET: assets/images/backgrounds/restaurant_bg.png
+          // ==========================================
           Positioned.fill(
-            child: Container(
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [Color(0xFF542207), Color(0xFF331404)],
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                ),
-              ),
-              child: const GameAssetImage(
-                assetPath: 'assets/images/backgrounds/restaurant_bg.png',
-                fit: BoxFit.cover,
-                fallbackEmoji: '🏮🍜',
-              ),
+            child: Image.asset(
+              'assets/images/backgrounds/restaurant_bg.png',
+              fit: BoxFit.cover,
             ),
           ),
 
-          // 2. CONTENT
+          // ==========================================
+          // LAYER 1: FLUTTER GAMEPLAY UI & PANDA CHEF
+          // ==========================================
           SafeArea(
             child: Column(
               children: [
@@ -41,17 +40,28 @@ class ChineseRestaurantScreen extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      IconButton(
-                        icon: const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.white),
-                        onPressed: onBack,
+                      Container(
+                        decoration: BoxDecoration(color: Colors.black.withOpacity(0.35), shape: BoxShape.circle),
+                        child: IconButton(
+                          icon: const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.white, size: 20),
+                          onPressed: onBack,
+                        ),
                       ),
                       const Text(
                         'Nhà hàng Trung Hoa',
-                        style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900, color: Colors.white),
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w900,
+                          color: Colors.white,
+                          shadows: [Shadow(color: Colors.black, blurRadius: 6)],
+                        ),
                       ),
-                      IconButton(
-                        icon: const Icon(Icons.settings, color: Colors.white),
-                        onPressed: () {},
+                      Container(
+                        decoration: BoxDecoration(color: Colors.black.withOpacity(0.35), shape: BoxShape.circle),
+                        child: IconButton(
+                          icon: const Icon(Icons.settings, color: Colors.white, size: 22),
+                          onPressed: () {},
+                        ),
                       ),
                     ],
                   ),
@@ -106,12 +116,13 @@ class ChineseRestaurantScreen extends StatelessWidget {
                 const Spacer(),
 
                 // Panda Chef Behind Counter
-                const SizedBox(
-                  width: 180,
-                  height: 180,
-                  child: GameAssetImage(
-                    assetPath: 'assets/images/characters/panda_chef.png',
-                    fallbackEmoji: '🐼🍜👨‍🍳',
+                SizedBox(
+                  width: 190,
+                  height: 190,
+                  child: Image.asset(
+                    'assets/images/characters/panda_chef.png',
+                    fit: BoxFit.contain,
+                    errorBuilder: (_, __, ___) => const Center(child: Text('🐼🍜👨‍🍳', style: TextStyle(fontSize: 70))),
                   ),
                 ),
                 const Spacer(),
@@ -120,9 +131,12 @@ class ChineseRestaurantScreen extends StatelessWidget {
                 Container(
                   width: double.infinity,
                   padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
-                  decoration: const BoxDecoration(
-                    color: Color(0xFFFFF7E8),
-                    borderRadius: BorderRadius.vertical(top: Radius.circular(32)),
+                  decoration: BoxDecoration(
+                    color: AppColors.cardCream,
+                    borderRadius: const BorderRadius.vertical(top: Radius.circular(32)),
+                    boxShadow: [
+                      BoxShadow(color: Colors.black.withOpacity(0.25), blurRadius: 16, offset: const Offset(0, -4)),
+                    ],
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -165,9 +179,10 @@ class ChineseRestaurantScreen extends StatelessWidget {
             SizedBox(
               width: 44,
               height: 44,
-              child: GameAssetImage(
-                assetPath: assetPath,
-                fallbackEmoji: fallbackEmoji,
+              child: Image.asset(
+                assetPath,
+                fit: BoxFit.contain,
+                errorBuilder: (_, __, ___) => Text(fallbackEmoji, style: const TextStyle(fontSize: 28)),
               ),
             ),
             const SizedBox(height: 6),

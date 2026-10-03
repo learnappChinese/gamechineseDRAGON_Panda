@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import '../../theme/app_colors.dart';
-import '../../widgets/game_asset_image.dart';
 import '../../widgets/answer_button.dart';
 
+/// REQUIRED ASSETS:
+/// 1. Background: assets/images/backgrounds/quick_answer_bg.png
 class QuickAnswerScreen extends StatelessWidget {
   final VoidCallback onBack;
 
@@ -11,28 +12,29 @@ class QuickAnswerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF0F172A),
       body: Stack(
         children: [
-          // 1. NIGHT FANTASY BACKGROUND
+          // ==========================================
+          // LAYER 0: PURE PURPLE/BLUE NIGHT FANTASY BACKGROUND
+          // REQUIRED ASSET: assets/images/backgrounds/quick_answer_bg.png
+          // ==========================================
           Positioned.fill(
-            child: Container(
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [Color(0xFF1E1035), Color(0xFF0F172A), Color(0xFF090D1A)],
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                ),
-              ),
-              child: const GameAssetImage(
-                assetPath: 'assets/images/backgrounds/quick_answer_bg.png',
-                fit: BoxFit.cover,
-                fallbackEmoji: '⚡🌙',
-              ),
+            child: Image.asset(
+              'assets/images/backgrounds/quick_answer_bg.png',
+              fit: BoxFit.cover,
             ),
           ),
 
-          // 2. CONTENT
+          // Night Atmospheric Vignette
+          Positioned.fill(
+            child: Container(
+              color: Colors.black.withOpacity(0.38),
+            ),
+          ),
+
+          // ==========================================
+          // LAYER 1: FLUTTER GAMEPLAY UI
+          // ==========================================
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
@@ -42,22 +44,33 @@ class QuickAnswerScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      IconButton(
-                        icon: const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.white),
-                        onPressed: onBack,
+                      Container(
+                        decoration: BoxDecoration(color: Colors.black.withOpacity(0.35), shape: BoxShape.circle),
+                        child: IconButton(
+                          icon: const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.white, size: 20),
+                          onPressed: onBack,
+                        ),
                       ),
                       const Text(
                         'Trả lời nhanh',
-                        style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900, color: Colors.white),
+                        style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.w900,
+                          color: Colors.white,
+                          shadows: [Shadow(color: Colors.black, blurRadius: 6)],
+                        ),
                       ),
-                      IconButton(
-                        icon: const Icon(Icons.settings, color: Colors.white),
-                        onPressed: () {},
+                      Container(
+                        decoration: BoxDecoration(color: Colors.black.withOpacity(0.35), shape: BoxShape.circle),
+                        child: IconButton(
+                          icon: const Icon(Icons.settings, color: Colors.white, size: 22),
+                          onPressed: () {},
+                        ),
                       ),
                     ],
                   ),
 
-                  // Timer & Score Pill
+                  // Timer & Score Pills
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 8),
                     child: Row(
@@ -66,7 +79,7 @@ class QuickAnswerScreen extends StatelessWidget {
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
                           decoration: BoxDecoration(
-                            color: Colors.white.withOpacity(0.12),
+                            color: Colors.black.withOpacity(0.4),
                             borderRadius: BorderRadius.circular(16),
                             border: Border.all(color: AppColors.primaryGold, width: 1.5),
                           ),
@@ -81,7 +94,7 @@ class QuickAnswerScreen extends StatelessWidget {
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
                           decoration: BoxDecoration(
-                            color: Colors.white.withOpacity(0.12),
+                            color: Colors.black.withOpacity(0.4),
                             borderRadius: BorderRadius.circular(16),
                             border: Border.all(color: Colors.white30, width: 1.2),
                           ),
@@ -109,7 +122,7 @@ class QuickAnswerScreen extends StatelessWidget {
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black.withOpacity(0.35),
-                          blurRadius: 18,
+                          blurRadius: 20,
                           offset: const Offset(0, 6),
                         ),
                       ],

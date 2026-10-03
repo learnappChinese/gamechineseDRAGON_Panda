@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import '../../theme/app_colors.dart';
-import '../../widgets/game_asset_image.dart';
 import '../../widgets/game_button.dart';
 
+/// REQUIRED ASSETS:
+/// 1. Background: assets/images/backgrounds/defeat_bg.png
+/// 2. Character:  assets/images/characters/panda_dizzy.png
 class BossBattleDefeatScreen extends StatelessWidget {
   final VoidCallback onRetry;
   final VoidCallback onBackToHub;
@@ -16,28 +18,29 @@ class BossBattleDefeatScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF220914),
       body: Stack(
         children: [
-          // 1. DEFEAT BACKGROUND
+          // ==========================================
+          // LAYER 0: PURE DARK DAMAGED BATTLEFIELD
+          // REQUIRED ASSET: assets/images/backgrounds/defeat_bg.png
+          // ==========================================
           Positioned.fill(
-            child: Container(
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [Color(0xFF380816), Color(0xFF1F0611), Color(0xFF12030A)],
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                ),
-              ),
-              child: const GameAssetImage(
-                assetPath: 'assets/images/backgrounds/defeat_temple_bg.png',
-                fit: BoxFit.cover,
-                fallbackEmoji: '🏯',
-              ),
+            child: Image.asset(
+              'assets/images/backgrounds/defeat_bg.png',
+              fit: BoxFit.cover,
             ),
           ),
 
-          // 2. CONTENT
+          // Dark Smoky Vignette
+          Positioned.fill(
+            child: Container(
+              color: Colors.black.withOpacity(0.4),
+            ),
+          ),
+
+          // ==========================================
+          // LAYER 1: FLUTTER UI & CHARACTERS
+          // ==========================================
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
@@ -53,6 +56,7 @@ class BossBattleDefeatScreen extends StatelessWidget {
                       color: AppColors.dangerRed,
                       shadows: [
                         Shadow(color: Colors.black, blurRadius: 10, offset: Offset(0, 3)),
+                        Shadow(color: Color(0xFFB62028), blurRadius: 16),
                       ],
                     ),
                   ),
@@ -72,12 +76,13 @@ class BossBattleDefeatScreen extends StatelessWidget {
                   const SizedBox(height: 28),
 
                   // Tired Panda
-                  const SizedBox(
-                    width: 160,
-                    height: 160,
-                    child: GameAssetImage(
-                      assetPath: 'assets/images/characters/panda_dizzy.png',
-                      fallbackEmoji: '🐼💫🥀',
+                  SizedBox(
+                    width: 170,
+                    height: 170,
+                    child: Image.asset(
+                      'assets/images/characters/panda_dizzy.png',
+                      fit: BoxFit.contain,
+                      errorBuilder: (_, __, ___) => const Center(child: Text('🐼💫🥀', style: TextStyle(fontSize: 64))),
                     ),
                   ),
                   const SizedBox(height: 38),

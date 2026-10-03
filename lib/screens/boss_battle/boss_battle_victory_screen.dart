@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import '../../theme/app_colors.dart';
-import '../../widgets/game_asset_image.dart';
 import '../../widgets/game_button.dart';
 
+/// REQUIRED ASSETS:
+/// 1. Background: assets/images/backgrounds/victory_bg.png
+/// 2. Character:  assets/images/characters/panda_avatar.png
 class BossBattleVictoryScreen extends StatelessWidget {
   final VoidCallback onContinue;
   final VoidCallback onBackToHub;
@@ -16,28 +18,37 @@ class BossBattleVictoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF1E0A24),
       body: Stack(
         children: [
-          // 1. TREASURE ROOM VICTORY BACKGROUND
+          // ==========================================
+          // LAYER 0: PURE GOLDEN TREASURE BACKGROUND
+          // REQUIRED ASSET: assets/images/backgrounds/victory_bg.png
+          // ==========================================
+          Positioned.fill(
+            child: Image.asset(
+              'assets/images/backgrounds/victory_bg.png',
+              fit: BoxFit.cover,
+            ),
+          ),
+
+          // Warm Ambient Glow
           Positioned.fill(
             child: Container(
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [Color(0xFF4A1024), Color(0xFF2E0815), Color(0xFF140718)],
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
+              decoration: BoxDecoration(
+                gradient: RadialGradient(
+                  colors: [
+                    Colors.transparent,
+                    Colors.black.withOpacity(0.4),
+                  ],
+                  radius: 0.9,
                 ),
-              ),
-              child: const GameAssetImage(
-                assetPath: 'assets/images/backgrounds/victory_treasure_bg.png',
-                fit: BoxFit.cover,
-                fallbackEmoji: '🏯',
               ),
             ),
           ),
 
-          // 2. CELEBRATION CONTENT
+          // ==========================================
+          // LAYER 1: FLUTTER CELEBRATION UI
+          // ==========================================
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
@@ -83,12 +94,13 @@ class BossBattleVictoryScreen extends StatelessWidget {
                   const SizedBox(height: 20),
 
                   // Happy Cheering Panda
-                  const SizedBox(
+                  SizedBox(
                     width: 140,
                     height: 140,
-                    child: GameAssetImage(
-                      assetPath: 'assets/images/characters/panda_avatar.png',
-                      fallbackEmoji: '🐼🏆',
+                    child: Image.asset(
+                      'assets/images/characters/panda_avatar.png',
+                      fit: BoxFit.contain,
+                      errorBuilder: (_, __, ___) => const Center(child: Text('🐼🏆✨', style: TextStyle(fontSize: 60))),
                     ),
                   ),
                   const SizedBox(height: 20),
