@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Golden Flame Crest Background Behind Panda -->
+    <path
+        android:fillColor="#FFA000"
+        android:pathData="M54,22 C58,30 68,34 72,44 C76,54 70,64 64,68 C74,60 76,46 70,38 C66,32 60,26 54,22 Z" />
+    <path
+        android:fillColor="#FF5722"
+        android:pathData="M54,22 C50,30 40,34 36,44 C32,54 38,64 44,68 C34,60 32,46 38,38 C42,32 48,26 54,22 Z" />
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M54,26 C57,32 64,36 65,42 C67,49 61,54 57,56 C63,50 63,42 59,37 C57,34 55,30 54,26 Z" />
+
+    <!-- Panda Ears -->
+    <path
+        android:fillColor="#212121"
+        android:pathData="M39,36 C35,36 32,39 32,44 C32,49 35,51 39,51 C41,51 43,50 44,48 C41,43 40,39 39,36 Z" />
+    <path
+        android:fillColor="#212121"
+        android:pathData="M69,36 C73,36 76,39 76,44 C76,49 73,51 69,51 C67,51 65,50 64,48 C67,43 68,39 69,36 Z" />
+
+    <!-- Panda Face Base -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,40 C43,40 36,48 36,58 C36,68 44,76 54,76 C64,76 72,68 72,58 C72,48 65,40 54,40 Z" />
+
+    <!-- Red Hero Headband -->
+    <path
+        android:fillColor="#E53935"
+        android:pathData="M36,50 C41,47 48,46 54,46 C60,46 67,47 72,50 L72,45 C67,42 60,41 54,41 C48,41 41,42 36,45 Z" />
+    <!-- Headband knot tail -->
+    <path
+        android:fillColor="#D32F2F"
+        android:pathData="M72,48 C76,48 80,45 83,43 C81,47 79,52 75,54 C74,53 73,50 72,48 Z" />
+
+    <!-- Eye Patches -->
+    <path
+        android:fillColor="#263238"
+        android:pathData="M44,52 C41,53 39,56 40,60 C41,63 45,64 47,62 C49,60 49,56 47,53 C46,52 45,52 44,52 Z" />
+    <path
+        android:fillColor="#263238"
+        android:pathData="M64,52 C67,53 69,56 68,60 C67,63 63,64 61,62 C59,60 59,56 61,53 C62,52 63,52 64,52 Z" />
+
+    <!-- Eyes (pupils) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M45,56 A1.5,1.5 0 1,1 45,53 A1.5,1.5 0 1,1 45,56" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M63,56 A1.5,1.5 0 1,1 63,53 A1.5,1.5 0 1,1 63,56" />
+
+    <!-- Nose & Mouth -->
+    <path
+        android:fillColor="#212121"
+        android:pathData="M54,62 C52,62 51,63.5 52.5,65 C53.5,66 54.5,66 55.5,65 C57,63.5 56,62 54,62 Z" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M52,67 Q54,69 56,67"
+        android:strokeWidth="1.2"
+        android:strokeColor="#212121"
+        android:strokeLineCap="round" />
+
+    <!-- Crossed Bamboo Arrow / Bow Accent -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M30,82 L78,82"
+        android:strokeWidth="2.5"
+        android:strokeColor="#FFB300"
+        android:strokeLineCap="round" />
+    <!-- Arrowhead -->
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M76,78 L84,82 L76,86 Z" />
+</vector>
+

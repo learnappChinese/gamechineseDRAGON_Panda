@@ -1,0 +1,6 @@
+{
+  "name": "Chinese Boss Battle",
+  "description": "Học tiếng Trung qua mini game Boss Battle: Panda vs Rồng Lửa với hiệu ứng chiến đấu 2D hấp dẫn.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
