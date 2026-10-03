@@ -4,7 +4,7 @@ import '../../widgets/game_button.dart';
 
 /// REQUIRED ASSETS:
 /// 1. Background: assets/images/backgrounds/victory_bg.png
-/// 2. Character:  assets/images/characters/panda_avatar.png
+/// 2. Character:  assets/images/characters/panda_victory.png
 class BossBattleVictoryScreen extends StatelessWidget {
   final VoidCallback onContinue;
   final VoidCallback onBackToHub;
@@ -98,7 +98,7 @@ class BossBattleVictoryScreen extends StatelessWidget {
                     width: 140,
                     height: 140,
                     child: Image.asset(
-                      'assets/images/characters/panda_avatar.png',
+                      'assets/images/characters/panda_victory.png',
                       fit: BoxFit.contain,
                       errorBuilder: (_, __, ___) => const Center(child: Text('🐼🏆✨', style: TextStyle(fontSize: 60))),
                     ),
@@ -195,3 +195,4 @@ class _RewardBadge extends StatelessWidget {
     );
   }
 }
+

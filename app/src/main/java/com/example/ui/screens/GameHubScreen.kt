@@ -1,5 +1,8 @@
 package com.example.ui.screens
 
+import com.example.ui.components.GameArt
+import androidx.compose.ui.layout.ContentScale
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -51,10 +54,13 @@ fun GameHubScreen(
     var selectedFilter by remember { mutableStateOf("Tất cả") }
     val filters = listOf("Tất cả", "Đang phát triển", "Sắp ra mắt")
 
+    Box(modifier = modifier.fillMaxSize()) {
+        GameArt("backgrounds/game_hub_bg.png", Modifier.matchParentSize(), contentScale = ContentScale.Crop)
+        Box(Modifier.matchParentSize().background(Color(0xE6FFF7E8)))
     Column(
-        modifier = modifier
+        modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFFBF8F5))
+
             .verticalScroll(rememberScrollState())
             .padding(16.dp)
     ) {
@@ -122,7 +128,7 @@ fun GameHubScreen(
                         ),
                     contentAlignment = Alignment.Center
                 ) {
-                    Text("🐼🏹", fontSize = 34.sp)
+                    GameArt("icons/boss_battle_thumb.png", Modifier.fillMaxSize(), "Boss Battle", ContentScale.Crop)
                 }
 
                 Spacer(modifier = Modifier.width(14.dp))
@@ -194,6 +200,7 @@ fun GameHubScreen(
             badge = "Sắp ra mắt"
         )
     }
+    }
 }
 
 @Composable
@@ -222,7 +229,11 @@ fun SecondaryGameCard(
                     .background(Color(0xFFF0EAE1)),
                 contentAlignment = Alignment.Center
             ) {
-                Text(emoji, fontSize = 28.sp)
+                GameArt(when (title) {
+                    "Radical Builder" -> "backgrounds/radical_builder_bg.png"
+                    "Tone Ninja" -> "characters/panda_ninja.png"
+                    else -> "characters/panda_chef.png"
+                }, Modifier.fillMaxSize(), title, ContentScale.Crop)
             }
             Spacer(modifier = Modifier.width(14.dp))
             Column(modifier = Modifier.weight(1f)) {
@@ -260,3 +271,4 @@ fun SecondaryGameCard(
         }
     }
 }
+

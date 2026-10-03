@@ -1,5 +1,8 @@
 package com.example.ui.screens
 
+import com.example.ui.components.GameArt
+import androidx.compose.ui.layout.ContentScale
+
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateColorAsState
@@ -445,7 +448,7 @@ private fun PlayerHpBadge(currentHp: Int, maxHp: Int) {
                 .background(Color(0xFFFFD54F)),
             contentAlignment = Alignment.Center
         ) {
-            Text("🐼", fontSize = 18.sp)
+            GameArt("characters/panda_avatar.png", Modifier.fillMaxSize(), "Panda")
         }
         Spacer(modifier = Modifier.width(8.dp))
         Column {
@@ -572,3 +575,4 @@ private fun AnswerOptionCard(
         }
     }
 }
+

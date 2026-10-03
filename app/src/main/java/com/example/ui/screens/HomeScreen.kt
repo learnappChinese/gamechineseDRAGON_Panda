@@ -1,5 +1,8 @@
 package com.example.ui.screens
 
+import com.example.ui.components.GameArt
+import androidx.compose.ui.layout.ContentScale
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -85,7 +88,7 @@ fun HomeScreen(
                         .background(Color(0xFFFFECB3)),
                     contentAlignment = Alignment.Center
                 ) {
-                    Text("🐼", fontSize = 26.sp)
+                    GameArt("characters/panda_avatar.png", Modifier.fillMaxSize(), "Panda")
                 }
                 Spacer(modifier = Modifier.width(12.dp))
                 Column {
@@ -161,6 +164,8 @@ fun HomeScreen(
                     )
                     .padding(18.dp)
             ) {
+                GameArt("backgrounds/home_bg.png", Modifier.matchParentSize(), contentScale = ContentScale.Crop)
+                Box(Modifier.matchParentSize().background(Color(0x66000000)))
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceBetween,
@@ -203,7 +208,7 @@ fun HomeScreen(
                             Text("Vào chiến ngay", color = Color(0xFF5D1010), fontWeight = FontWeight.Bold)
                         }
                     }
-                    Text("🐲", fontSize = 54.sp)
+                    GameArt("characters/dragon_fire.png", Modifier.size(100.dp), "Rồng Lửa")
                 }
             }
         }
@@ -442,3 +447,4 @@ fun QuickCategoryCard(
         }
     }
 }
+
