@@ -1,0 +1,105 @@
+{
+  "generator": "built-in image_gen",
+  "assets": [
+    {
+      "path": "assets/images/backgrounds/home_bg.png",
+      "transparent_background": false,
+      "prompt": "Use case: stylized-concept. Production game asset for Chinese learning casual RPG. Match attached reference's premium painterly 2D mobile game illustration, polished cute fantasy, rich colors, soft atmospheric depth, detailed materials, warm cinematic lighting. Portrait 9:19.5 ancient Chinese fantasy town, bright blue sky, misty mountains, pagodas on sides, cherry blossoms, warm lanterns, stone pathway. Open upper sky for header, open lower middle for character. No characters. No text, buttons, UI, logos, watermarks, frames, contact sheet, or labels. Generate ONE standalone asset. Save intended filename backgrounds/home_bg.png"
+    },
+    {
+      "path": "assets/images/backgrounds/game_hub_bg.png",
+      "transparent_background": false,
+      "prompt": "Use case: stylized-concept. Production game asset for Chinese learning casual RPG. Match attached reference's premium painterly 2D mobile game illustration, polished cute fantasy, rich colors, soft atmospheric depth, detailed materials, warm cinematic lighting. Portrait 9:19.5 Chinese fantasy city at blue hour, blue mountains, pagodas at edges, cherry blossoms, warm lanterns. Quiet uncluttered central area for list cards. No characters. No text, buttons, UI, logos, watermarks, frames, contact sheet, or labels. Generate ONE standalone asset. Save intended filename backgrounds/game_hub_bg.png"
+    },
+    {
+      "path": "assets/images/backgrounds/boss_intro_bg.png",
+      "transparent_background": false,
+      "prompt": "Use case: stylized-concept. Production game asset for Chinese learning casual RPG. Match attached reference's premium painterly 2D mobile game illustration, polished cute fantasy, rich colors, soft atmospheric depth, detailed materials, warm cinematic lighting. Portrait 9:19.5 epic Chinese mountain valley at dramatic pink orange sunset, layered pagodas, cherry blossoms, glowing lanterns, stone terraces. Open center for two separate battle characters. No characters. No text, buttons, UI, logos, watermarks, frames, contact sheet, or labels. Generate ONE standalone asset. Save intended filename backgrounds/boss_intro_bg.png"
+    },
+    {
+      "path": "assets/images/backgrounds/boss_battle_bg.png",
+      "transparent_background": false,
+      "prompt": "Use case: stylized-concept. Production game asset for Chinese learning casual RPG. Match attached reference's premium painterly 2D mobile game illustration, polished cute fantasy, rich colors, soft atmospheric depth, detailed materials, warm cinematic lighting. Landscape 3:2 Chinese fantasy battle arena, pink blue sunset, mountain peaks, temples at edges, cherry blossoms, lanterns, stone battle platform across bottom quarter. Open left and right ground for characters, clear center projectile path. No characters, no fire. No text, buttons, UI, logos, watermarks, frames, contact sheet, or labels. Generate ONE standalone asset. Save intended filename backgrounds/boss_battle_bg.png"
+    },
+    {
+      "path": "assets/images/backgrounds/victory_bg.png",
+      "transparent_background": false,
+      "prompt": "Use case: stylized-concept. Production game asset for Chinese learning casual RPG. Match attached reference's premium painterly 2D mobile game illustration, polished cute fantasy, rich colors, soft atmospheric depth, detailed materials, warm cinematic lighting. Portrait 9:19.5 Chinese fantasy treasure courtyard, warm golden sunlight, treasure and gold coins along bottom edges, glowing lanterns, celebratory sparkles. Clear center for character and reward card. No characters. No text, buttons, UI, logos, watermarks, frames, contact sheet, or labels. Generate ONE standalone asset. Save intended filename backgrounds/victory_bg.png"
+    },
+    {
+      "path": "assets/images/backgrounds/defeat_bg.png",
+      "transparent_background": false,
+      "prompt": "Use case: stylized-concept. Production game asset for Chinese learning casual RPG. Match attached reference's premium painterly 2D mobile game illustration, polished cute fantasy, rich colors, soft atmospheric depth, detailed materials, warm cinematic lighting. Portrait 9:19.5 dark purple crimson Chinese mountain battlefield, damaged lanterns, drifting embers, smoky distant pagodas, cracked stone floor. Dramatic but friendly learning game. Open center foreground. No characters. No text, buttons, UI, logos, watermarks, frames, contact sheet, or labels. Generate ONE standalone asset. Save intended filename backgrounds/defeat_bg.png"
+    },
+    {
+      "path": "assets/images/backgrounds/radical_builder_bg.png",
+      "transparent_background": false,
+      "prompt": "Use case: stylized-concept. Production game asset for Chinese learning casual RPG. Match attached reference's premium painterly 2D mobile game illustration, polished cute fantasy, rich colors, soft atmospheric depth, detailed materials, warm cinematic lighting. Portrait 9:19.5 peaceful Chinese garden, jade lake, lotus flowers, arched bridge, pavilion, distant mountains, cherry blossoms, bright blue sky. Clear quiet center for puzzle UI. No characters. No text, buttons, UI, logos, watermarks, frames, contact sheet, or labels. Generate ONE standalone asset. Save intended filename backgrounds/radical_builder_bg.png"
+    },
+    {
+      "path": "assets/images/backgrounds/tone_ninja_bg.png",
+      "transparent_background": false,
+      "prompt": "Use case: stylized-concept. Production game asset for Chinese learning casual RPG. Match attached reference's premium painterly 2D mobile game illustration, polished cute fantasy, rich colors, soft atmospheric depth, detailed materials, warm cinematic lighting. Portrait 9:19.5 Chinese village at night, blue sky and moon, tiled rooftops at sides, warm glowing lanterns, distant mountains. Clear central space for quiz UI. No characters. No text, buttons, UI, logos, watermarks, frames, contact sheet, or labels. Generate ONE standalone asset. Save intended filename backgrounds/tone_ninja_bg.png"
+    },
+    {
+      "path": "assets/images/backgrounds/restaurant_bg.png",
+      "transparent_background": false,
+      "prompt": "Use case: stylized-concept. Production game asset for Chinese learning casual RPG. Match attached reference's premium painterly 2D mobile game illustration, polished cute fantasy, rich colors, soft atmospheric depth, detailed materials, warm cinematic lighting. Portrait 9:19.5 traditional Chinese restaurant game interior, beautiful wooden counter across lower third, red lanterns, warm orange lighting, shelves and kitchen behind counter. Clear center for separate panda chef. No characters. No text, buttons, UI, logos, watermarks, frames, contact sheet, or labels. Generate ONE standalone asset. Save intended filename backgrounds/restaurant_bg.png"
+    },
+    {
+      "path": "assets/images/backgrounds/quick_answer_bg.png",
+      "transparent_background": false,
+      "prompt": "Use case: stylized-concept. Production game asset for Chinese learning casual RPG. Match attached reference's premium painterly 2D mobile game illustration, polished cute fantasy, rich colors, soft atmospheric depth, detailed materials, warm cinematic lighting. Portrait 9:19.5 magical purple blue Chinese fantasy night, distant pagodas, misty mountain silhouettes, lanterns and cherry blossoms at side edges, tiny magical lights. Quiet central region for quiz UI. No characters. No text, buttons, UI, logos, watermarks, frames, contact sheet, or labels. Generate ONE standalone asset. Save intended filename backgrounds/quick_answer_bg.png"
+    },
+    {
+      "path": "assets/images/characters/panda_archer.png",
+      "transparent_background": true,
+      "prompt": "Use case: stylized-concept. Production game asset for Chinese learning casual RPG. Match attached reference's premium painterly 2D mobile game illustration, polished cute fantasy, rich colors, soft atmospheric depth, detailed materials, warm cinematic lighting. Transparent cutout single cute heroic panda archer, full body facing RIGHT, broad straw hat, dark blue Chinese martial arts outfit, red scarf, leather belt, quiver, wooden bow held ready pointing right. Feet fully visible, generous padding, no ground or scenery. No text, buttons, UI, logos, watermarks, frames, contact sheet, or labels. Generate ONE standalone asset. Save intended filename characters/panda_archer.png"
+    },
+    {
+      "path": "assets/images/characters/dragon_fire.png",
+      "transparent_background": true,
+      "prompt": "Use case: stylized-concept. Production game asset for Chinese learning casual RPG. Match attached reference's premium painterly 2D mobile game illustration, polished cute fantasy, rich colors, soft atmospheric depth, detailed materials, warm cinematic lighting. Transparent cutout single imposing cute Chinese red fire dragon facing LEFT, full coiled body, red scales, gold antler horns, orange gold belly, glowing amber eyes, open mouth aimed to left, four claws, all tail and horns visible with padding. No fire beam or background. No text, buttons, UI, logos, watermarks, frames, contact sheet, or labels. Generate ONE standalone asset. Save intended filename characters/dragon_fire.png"
+    },
+    {
+      "path": "assets/images/characters/panda_avatar.png",
+      "transparent_background": true,
+      "prompt": "Use case: stylized-concept. Production game asset for Chinese learning casual RPG. Match attached reference's premium painterly 2D mobile game illustration, polished cute fantasy, rich colors, soft atmospheric depth, detailed materials, warm cinematic lighting. Transparent cutout cute panda hero face and shoulders, straw hat, red scarf, dark blue tunic, friendly smiling expression, centered icon portrait. Same panda identity as archer. No text, buttons, UI, logos, watermarks, frames, contact sheet, or labels. Generate ONE standalone asset. Save intended filename characters/panda_avatar.png"
+    },
+    {
+      "path": "assets/images/characters/panda_chef.png",
+      "transparent_background": true,
+      "prompt": "Use case: stylized-concept. Production game asset for Chinese learning casual RPG. Match attached reference's premium painterly 2D mobile game illustration, polished cute fantasy, rich colors, soft atmospheric depth, detailed materials, warm cinematic lighting. Transparent cutout cute panda chef full body, white tall chef hat, ivory Chinese chef jacket, red neckerchief, smiling, holding cooking ladle, fully visible with padding. No text, buttons, UI, logos, watermarks, frames, contact sheet, or labels. Generate ONE standalone asset. Save intended filename characters/panda_chef.png"
+    },
+    {
+      "path": "assets/images/characters/panda_ninja.png",
+      "transparent_background": true,
+      "prompt": "Use case: stylized-concept. Production game asset for Chinese learning casual RPG. Match attached reference's premium painterly 2D mobile game illustration, polished cute fantasy, rich colors, soft atmospheric depth, detailed materials, warm cinematic lighting. Transparent cutout cute panda ninja full body, dark navy ninja outfit and red scarf, lively ready stance holding small practice bamboo sword, full silhouette visible with padding. No text, buttons, UI, logos, watermarks, frames, contact sheet, or labels. Generate ONE standalone asset. Save intended filename characters/panda_ninja.png"
+    },
+    {
+      "path": "assets/images/characters/panda_dizzy.png",
+      "transparent_background": true,
+      "prompt": "Use case: stylized-concept. Production game asset for Chinese learning casual RPG. Match attached reference's premium painterly 2D mobile game illustration, polished cute fantasy, rich colors, soft atmospheric depth, detailed materials, warm cinematic lighting. Transparent cutout cute tired panda hero sitting slumped, straw hat beside him, dark blue Chinese outfit, red scarf, eyes closed, tiny cartoon dizzy stars overhead. Friendly, no injury or blood, whole figure visible. No text, buttons, UI, logos, watermarks, frames, contact sheet, or labels. Generate ONE standalone asset. Save intended filename characters/panda_dizzy.png"
+    },
+    {
+      "path": "assets/images/characters/panda_victory.png",
+      "transparent_background": true,
+      "prompt": "Use case: stylized-concept. Production game asset for Chinese learning casual RPG. Match attached reference's premium painterly 2D mobile game illustration, polished cute fantasy, rich colors, soft atmospheric depth, detailed materials, warm cinematic lighting. Transparent cutout cute panda hero full body jubilantly raising both paws, straw hat, dark blue Chinese martial arts outfit, red scarf, smiling broadly. Same archer identity. Fully visible with padding. No text, buttons, UI, logos, watermarks, frames, contact sheet, or labels. Generate ONE standalone asset. Save intended filename characters/panda_victory.png"
+    },
+    {
+      "path": "assets/images/foods/noodles.png",
+      "transparent_background": true,
+      "prompt": "Use case: stylized-concept. Asset for premium Chinese fantasy casual RPG learning game. Painterly polished colorful 2D mobile game illustration, warm cinematic lighting, detailed material, gentle outline, matching cute panda game world. One beautiful Chinese blue-and-white porcelain bowl of noodles, golden broth, green scallions, bok choy, chopsticks resting on rim. Single isolated appetizing food item, three quarter view. Transparent background, whole item visible with generous padding. No text, scenery, UI or watermarks. ONE standalone asset intended filename foods/noodles.png"
+    },
+    {
+      "path": "assets/images/foods/rice.png",
+      "transparent_background": true,
+      "prompt": "Use case: stylized-concept. Asset for premium Chinese fantasy casual RPG learning game. Painterly polished colorful 2D mobile game illustration, warm cinematic lighting, detailed material, gentle outline, matching cute panda game world. One beautiful Chinese blue-and-white porcelain bowl heaped with fluffy white rice, a few green scallions. Single isolated appetizing food item, three quarter view. Transparent background, whole item visible with generous padding. No text, scenery, UI or watermarks. ONE standalone asset intended filename foods/rice.png"
+    },
+    {
+      "path": "assets/images/foods/dumplings.png",
+      "transparent_background": true,
+      "prompt": "Use case: stylized-concept. Asset for premium Chinese fantasy casual RPG learning game. Painterly polished colorful 2D mobile game illustration, warm cinematic lighting, detailed material, gentle outline, matching cute panda game world. One bamboo steamer basket with five plump steamed Chinese dumplings, delicate pleats, small green garnish. Single isolated appetizing food item, three quarter view. Transparent background, whole item visible with generous padding. No text, scenery, UI or watermarks. ONE standalone asset intended filename foods/dumplings.png"
+    }
+  ]
+}

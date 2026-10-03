@@ -51,6 +51,9 @@ android {
     sourceCompatibility = JavaVersion.VERSION_11
     targetCompatibility = JavaVersion.VERSION_11
   }
+  // Share the same production artwork with Flutter without duplicating binaries.
+  sourceSets.getByName("main").assets.srcDir("../assets")
+
   buildFeatures {
     compose = true
     buildConfig = true
@@ -134,3 +137,4 @@ dependencies {
   "ksp"(libs.androidx.room.compiler)
   "ksp"(libs.moshi.kotlin.codegen)
 }
+

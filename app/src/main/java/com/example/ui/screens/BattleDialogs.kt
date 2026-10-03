@@ -1,5 +1,8 @@
 package com.example.ui.screens
 
+import com.example.ui.components.GameArt
+import androidx.compose.ui.layout.ContentScale
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -46,6 +49,9 @@ fun BattleVictoryDialog(
             colors = CardDefaults.cardColors(containerColor = Color.White),
             elevation = CardDefaults.cardElevation(8.dp)
         ) {
+            Box {
+                GameArt("backgrounds/victory_bg.png", Modifier.matchParentSize(), contentScale = ContentScale.Crop)
+                Box(Modifier.matchParentSize().background(Color(0xD9FFF7E8)))
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -86,7 +92,7 @@ fun BattleVictoryDialog(
                         ),
                     contentAlignment = Alignment.Center
                 ) {
-                    Text("🐼🏆", fontSize = 44.sp)
+                    GameArt("characters/panda_victory.png", Modifier.fillMaxSize(), "Panda chiến thắng")
                 }
 
                 Spacer(modifier = Modifier.height(16.dp))
@@ -134,6 +140,7 @@ fun BattleVictoryDialog(
                     )
                 }
             }
+            }
         }
     }
 }
@@ -152,6 +159,9 @@ fun BattleDefeatDialog(
             colors = CardDefaults.cardColors(containerColor = Color(0xFF231826)),
             elevation = CardDefaults.cardElevation(8.dp)
         ) {
+            Box {
+                GameArt("backgrounds/defeat_bg.png", Modifier.matchParentSize(), contentScale = ContentScale.Crop)
+                Box(Modifier.matchParentSize().background(Color(0x99120B24)))
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -175,7 +185,7 @@ fun BattleDefeatDialog(
                         .background(Color(0xFF38243C)),
                     contentAlignment = Alignment.Center
                 ) {
-                    Text("🐼💫", fontSize = 44.sp)
+                    GameArt("characters/panda_dizzy.png", Modifier.fillMaxSize(), "Panda nghỉ ngơi")
                 }
 
                 Spacer(modifier = Modifier.height(16.dp))
@@ -219,6 +229,7 @@ fun BattleDefeatDialog(
                     }
                 }
             }
+            }
         }
     }
 }
@@ -236,3 +247,4 @@ private fun RewardItem(icon: String, label: String) {
         )
     }
 }
+

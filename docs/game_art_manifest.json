@@ -1,0 +1,186 @@
+{
+  "assets": [
+    {
+      "path": "assets/images/backgrounds/boss_battle_bg.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "sha256": "8ee7decf27b4d33f7f8b70cdb25402802ff9fa9770311f79e3671bbf2525a3ad"
+    },
+    {
+      "path": "assets/images/backgrounds/boss_battle_portrait_bg.png",
+      "width": 852,
+      "height": 1847,
+      "mode": "RGB",
+      "sha256": "e3fa8c957b1b156a19cd6ae315ea4203a0a3051ef96c77070da3483c0e3e8722"
+    },
+    {
+      "path": "assets/images/backgrounds/boss_intro_bg.png",
+      "width": 852,
+      "height": 1847,
+      "mode": "RGB",
+      "sha256": "e3fa8c957b1b156a19cd6ae315ea4203a0a3051ef96c77070da3483c0e3e8722"
+    },
+    {
+      "path": "assets/images/backgrounds/defeat_bg.png",
+      "width": 853,
+      "height": 1844,
+      "mode": "RGB",
+      "sha256": "91f839a244cfe930b9c65470b46f53736b3153f9eb970c2d6d07a1218569ee28"
+    },
+    {
+      "path": "assets/images/backgrounds/game_hub_bg.png",
+      "width": 852,
+      "height": 1847,
+      "mode": "RGB",
+      "sha256": "15d9f4e1b8d9ad14a5550ea43ae7b65b7d9f6839672ef16ccb0e03bfcc2f16d4"
+    },
+    {
+      "path": "assets/images/backgrounds/home_bg.png",
+      "width": 851,
+      "height": 1848,
+      "mode": "RGB",
+      "sha256": "bd292606973163d81cfc9a66ee7ba47057a80c6b52daa79d9877d6962615d073"
+    },
+    {
+      "path": "assets/images/backgrounds/quick_answer_bg.png",
+      "width": 853,
+      "height": 1844,
+      "mode": "RGB",
+      "sha256": "b006f26d4e0ab11ce28b737432eb23941fa7a7582bb8cfba4867ab98b9c1b057"
+    },
+    {
+      "path": "assets/images/backgrounds/radical_builder_bg.png",
+      "width": 850,
+      "height": 1850,
+      "mode": "RGB",
+      "sha256": "0b924d69bcc5f0e006fd47eb08fd00725b129fdccdeffc4c8f03be03175c7500"
+    },
+    {
+      "path": "assets/images/backgrounds/restaurant_bg.png",
+      "width": 852,
+      "height": 1846,
+      "mode": "RGB",
+      "sha256": "47e47976727101a9d8026680d756fca35e924ec511bb635ae7d6ea60696804d1"
+    },
+    {
+      "path": "assets/images/backgrounds/tone_ninja_bg.png",
+      "width": 876,
+      "height": 1796,
+      "mode": "RGB",
+      "sha256": "9f127a0506f6acb37e709c7d7d78681ae43a28b46964723e4e24680a02b71f48"
+    },
+    {
+      "path": "assets/images/backgrounds/victory_bg.png",
+      "width": 852,
+      "height": 1846,
+      "mode": "RGB",
+      "sha256": "c55d300371538854830c9263baac7aca81c3c1674bbbf7517b54a90dfb46c72e"
+    },
+    {
+      "path": "assets/images/characters/dragon_fire.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "sha256": "1a895442c75fe83ce4db6612a600bde1eefd12d55b274643cbcc93256cf63c33"
+    },
+    {
+      "path": "assets/images/characters/panda_archer.png",
+      "width": 1328,
+      "height": 1184,
+      "mode": "RGBA",
+      "sha256": "6b0cb4f607f6b52efdf7f3897958a7398f4e46e44dfe09b588d59514bd93ce5a"
+    },
+    {
+      "path": "assets/images/characters/panda_avatar.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "681913c0763b5d7870541c546d422b59d1314330c637bc22a033468c3db8ce57"
+    },
+    {
+      "path": "assets/images/characters/panda_chef.png",
+      "width": 1145,
+      "height": 1374,
+      "mode": "RGBA",
+      "sha256": "1ce0443723c6a1534c14a7094d515d0643fe996482eec9ca8f61ab0e255ee67f"
+    },
+    {
+      "path": "assets/images/characters/panda_dizzy.png",
+      "width": 1292,
+      "height": 1217,
+      "mode": "RGBA",
+      "sha256": "0a3a395758491d95e40c141677d06b5cf5c2483f1460ece3648c4a26789cbb83"
+    },
+    {
+      "path": "assets/images/characters/panda_ninja.png",
+      "width": 1214,
+      "height": 1295,
+      "mode": "RGBA",
+      "sha256": "0f182b3b7ee0426974cd85b728431059088df201e5130b6f7426fa6743a62afb"
+    },
+    {
+      "path": "assets/images/characters/panda_victory.png",
+      "width": 1208,
+      "height": 1302,
+      "mode": "RGBA",
+      "sha256": "b85280abf7457f68cb3af783d2acb15d8e77b9e5fb5341a21d91458ba399fe34"
+    },
+    {
+      "path": "assets/images/foods/dumplings.png",
+      "width": 1312,
+      "height": 1199,
+      "mode": "RGBA",
+      "sha256": "246a7650844ce3b2dde0848cd72c8e37b458352925aa563fda93546a811c4be1"
+    },
+    {
+      "path": "assets/images/foods/noodles.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "sha256": "87006d7ab2ccd1757f6903d8bb3caeaba062fbece5231b6b791b59929afc8fe0"
+    },
+    {
+      "path": "assets/images/foods/rice.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "sha256": "3db21bc5b32c7674b1dde2545e9c72d9946a26d141b3319d32977a0be4da32d5"
+    },
+    {
+      "path": "assets/images/icons/boss_battle_thumb.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "681913c0763b5d7870541c546d422b59d1314330c637bc22a033468c3db8ce57"
+    },
+    {
+      "path": "assets/images/icons/quick_answer_thumb.png",
+      "width": 853,
+      "height": 1844,
+      "mode": "RGB",
+      "sha256": "b006f26d4e0ab11ce28b737432eb23941fa7a7582bb8cfba4867ab98b9c1b057"
+    },
+    {
+      "path": "assets/images/icons/radical_builder_thumb.png",
+      "width": 850,
+      "height": 1850,
+      "mode": "RGB",
+      "sha256": "0b924d69bcc5f0e006fd47eb08fd00725b129fdccdeffc4c8f03be03175c7500"
+    },
+    {
+      "path": "assets/images/icons/restaurant_thumb.png",
+      "width": 1145,
+      "height": 1374,
+      "mode": "RGBA",
+      "sha256": "1ce0443723c6a1534c14a7094d515d0643fe996482eec9ca8f61ab0e255ee67f"
+    },
+    {
+      "path": "assets/images/icons/tone_ninja_thumb.png",
+      "width": 1214,
+      "height": 1295,
+      "mode": "RGBA",
+      "sha256": "0f182b3b7ee0426974cd85b728431059088df201e5130b6f7426fa6743a62afb"
+    }
+  ]
+}

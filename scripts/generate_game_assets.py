@@ -1,5 +1,17 @@
 import os
 import subprocess
+import argparse
+from pathlib import Path
+
+parser = argparse.ArgumentParser(description='Legacy placeholder generator. Never use for production artwork.')
+parser.add_argument('--output-dir', required=True, help='Separate scratch folder outside the repository assets directory')
+args = parser.parse_args()
+output = Path(args.output_dir).resolve()
+production = (Path(__file__).resolve().parents[1] / 'assets').resolve()
+if output == production or production in output.parents or output in production.parents:
+    parser.error('Output must be outside the production assets directory.')
+output.mkdir(parents=True, exist_ok=True)
+os.chdir(output)
 
 def run_cmd(cmd):
     subprocess.run(cmd, shell=True, check=True)
@@ -95,3 +107,4 @@ for ic in icons:
     run_cmd(cmd)
 
 print("ALL_GAME_ASSETS_GENERATED_SUCCESSFULLY")
+

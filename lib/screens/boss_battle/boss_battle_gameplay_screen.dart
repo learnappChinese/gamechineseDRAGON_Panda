@@ -5,7 +5,7 @@ import '../../widgets/hp_bar.dart';
 import '../../widgets/answer_button.dart';
 
 /// REQUIRED ASSETS:
-/// 1. Background: assets/images/backgrounds/boss_battle_bg.png
+/// 1. Background: assets/images/backgrounds/boss_battle_portrait_bg.png
 /// 2. Characters: assets/images/characters/panda_archer.png
 ///                assets/images/characters/dragon_fire.png
 ///                assets/images/characters/panda_avatar.png
@@ -137,11 +137,11 @@ class _BossBattleGameplayScreenState extends State<BossBattleGameplayScreen> {
         children: [
           // ==========================================
           // LAYER 0: PURE BATTLE ARENA BACKGROUND
-          // REQUIRED ASSET: assets/images/backgrounds/boss_battle_bg.png
+          // REQUIRED ASSET: assets/images/backgrounds/boss_battle_portrait_bg.png
           // ==========================================
           Positioned.fill(
             child: Image.asset(
-              'assets/images/backgrounds/boss_battle_bg.png',
+              'assets/images/backgrounds/boss_battle_portrait_bg.png',
               fit: BoxFit.cover,
             ),
           ),
@@ -466,3 +466,4 @@ class _BossBattleGameplayScreenState extends State<BossBattleGameplayScreen> {
     );
   }
 }
+

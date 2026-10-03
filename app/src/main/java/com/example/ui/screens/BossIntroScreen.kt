@@ -1,5 +1,8 @@
 package com.example.ui.screens
 
+import com.example.ui.components.GameArt
+import androidx.compose.ui.layout.ContentScale
+
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -64,6 +67,8 @@ fun BossIntroScreen(
                 )
             )
     ) {
+        GameArt("backgrounds/boss_intro_bg.png", Modifier.fillMaxSize(), contentScale = ContentScale.Crop)
+        Box(Modifier.fillMaxSize().background(Color(0x55000000)))
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -114,31 +119,8 @@ fun BossIntroScreen(
                             )
                         )
                 ) {
-                    androidx.compose.foundation.Canvas(modifier = Modifier.fillMaxSize()) {
-                        val w = size.width
-                        val h = size.height
-
-                        // Golden moon aura
-                        drawCircle(
-                            brush = Brush.radialGradient(
-                                colors = listOf(Color(0xFFFFEEB3), Color(0x33FFB300), Color.Transparent),
-                                center = Offset(w * 0.75f, h * 0.45f),
-                                radius = 90f
-                            ),
-                            radius = 90f,
-                            center = Offset(w * 0.75f, h * 0.45f)
-                        )
-
-                        // Clashing fire energy beams
-                        drawLine(
-                            brush = Brush.horizontalGradient(
-                                colors = listOf(Color.Transparent, Color(0xFFFFD54F), Color(0xFFFF3D00), Color.Transparent)
-                            ),
-                            start = Offset(w * 0.35f, h * 0.5f),
-                            end = Offset(w * 0.65f, h * 0.5f),
-                            strokeWidth = 3f
-                        )
-                    }
+                    GameArt("backgrounds/boss_intro_bg.png", Modifier.matchParentSize(), contentScale = ContentScale.Crop)
+                    Box(Modifier.matchParentSize().background(Color(0x55000000)))
 
                     Row(
                         modifier = Modifier.fillMaxSize().padding(horizontal = 24.dp),
@@ -149,11 +131,12 @@ fun BossIntroScreen(
                         Column(
                             horizontalAlignment = Alignment.CenterHorizontally,
                             modifier = Modifier
+                                .weight(1f)
                                 .clip(RoundedCornerShape(16.dp))
                                 .background(Color(0x33000000))
                                 .padding(horizontal = 14.dp, vertical = 10.dp)
                         ) {
-                            Text("🐼🏹", fontSize = 48.sp)
+                            GameArt("characters/panda_archer.png", Modifier.size(90.dp), "Đại Hiệp Panda")
                             Spacer(modifier = Modifier.height(4.dp))
                             Text("Đại Hiệp Panda", color = Color(0xFFFFD54F), fontWeight = FontWeight.Bold, fontSize = 13.sp)
                             Text("HP 200", color = Color(0xFF69F0AE), fontSize = 11.sp, fontWeight = FontWeight.Bold)
@@ -177,11 +160,12 @@ fun BossIntroScreen(
                         Column(
                             horizontalAlignment = Alignment.CenterHorizontally,
                             modifier = Modifier
+                                .weight(1f)
                                 .clip(RoundedCornerShape(16.dp))
                                 .background(Color(0x33000000))
                                 .padding(horizontal = 14.dp, vertical = 10.dp)
                         ) {
-                            Text("🐲🔥", fontSize = 48.sp)
+                            GameArt("characters/dragon_fire.png", Modifier.size(90.dp), "Rồng Lửa")
                             Spacer(modifier = Modifier.height(4.dp))
                             Text("Rồng Lửa Lv.3", color = Color(0xFFFF8A65), fontWeight = FontWeight.Bold, fontSize = 13.sp)
                             Text("HP 500", color = Color(0xFFFF5252), fontSize = 11.sp, fontWeight = FontWeight.Bold)
@@ -298,3 +282,4 @@ private fun FeatureRow(
         }
     }
 }
+
